@@ -2,7 +2,7 @@
 
 > Compare. Calculate. Negotiate. Decide.
 
-A single-file, offline-first procurement toolkit with 20 decision-support calculators. No login, no upload, no backend — runs entirely in your browser.
+A single-file, offline-first procurement toolkit with 18 decision-support calculators. No login, no upload, no backend — runs entirely in your browser.
 
 **Live:** [DigiTracks/Sherpa_ToolKit](https://github.com/DigiTracks/Sherpa_ToolKit)
 
@@ -12,7 +12,7 @@ A single-file, offline-first procurement toolkit with 20 decision-support calcul
 
 SAP manages the transaction. **Procure Sherpa helps the buyer make the decision.**
 
-Every tool follows the same pattern: **Input → Calculation → Result → Interpretation → Director's Note**. You get a number, a procurement meaning, and expert context — in under 2 minutes.
+Every tool follows the same pattern: **Input → Calculation → Result → Interpretation → Expert's Advice**. You get a number, a procurement meaning, and expert context — in under 2 minutes.
 
 ---
 
@@ -60,9 +60,9 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 
 ## Features
 
-- **20 tools** covering the full procurement decision lifecycle
+- **18 tools** covering the full procurement decision lifecycle
 - **Load Example** on every tool — see pre-filled data instantly
-- **Director's Note** on every result — expert procurement context
+- **Expert's Advice** on every result — expert procurement context
 - **Cross-tool handoffs** — send Quote results to Negotiation or TCO
 - **Print-friendly** — Ctrl+P on any page for a clean report
 - **Dark mode** — toggle from sidebar, preference saved
@@ -77,8 +77,10 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 
 | File | Description |
 |------|-------------|
-| `Procure_Sherpa_ToolKit.HTML` | Full toolkit — 20 tools, dark mode, all features |
-| `Procure_Sherpa_Basic Toolkit.html` | Basic version with core procurement tools |
+| `index.html` | Full toolkit — 18 tools, dark mode, all features (Vercel entry point) |
+| `Tool Kit 1/Procure_Sherpa_ToolKit.HTML` | Full toolkit — 18 tools, dark mode, all features |
+| `Tool Kit 1/Procure_Sherpa_Basic Toolkit.html` | RFQ workflow manager — RFQ creation, supplier evaluation, savings tracker, contracts, negotiation & dashboard |
+| `ProcureSherpaBasictoolkiit.html` | Legacy basic toolkit file (mirrors RFQ workflow version) |
 
 ---
 
@@ -88,7 +90,7 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 2. Click any tool from the sidebar or homepage
 3. Click **Load Example** to see it in action
 4. Replace with your actual data
-5. Click **Calculate** — review results, KPIs, and Director's Note
+5. Click **Calculate** — review results, KPIs, and Expert's Advice
 
 ---
 
