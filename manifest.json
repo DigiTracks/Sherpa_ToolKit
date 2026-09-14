@@ -1,0 +1,17 @@
+{
+  "name": "Procure Sherpa",
+  "short_name": "Sherpa",
+  "description": "Offline-first procurement decision toolkit — 18 calculators. Private by design.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a1120",
+  "theme_color": "#0a1120",
+  "icons": [
+    {
+      "src": "Procuresherpa Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

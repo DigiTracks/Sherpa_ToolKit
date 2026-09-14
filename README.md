@@ -64,6 +64,10 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 - **Load Example** on every tool — see pre-filled data instantly
 - **Expert's Advice** on every result — expert procurement context
 - **Cross-tool handoffs** — send Quote results to Negotiation or TCO
+- **Savings Dashboard** — all saved comparisons in one place: who is cheapest, how much you save
+- **Backup & Restore** — one-click JSON download from Saved Work; move machines without losing data
+- **Share links** — copy-link on any result; anyone opening it sees that comparison
+- **Audit trail** — every save/delete/export recorded locally (last 100 events)
 - **Print-friendly** — Ctrl+P on any page for a clean report
 - **Dark mode** — toggle from sidebar, preference saved
 - **Sortable tables** — click any column header
@@ -73,20 +77,20 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 
 ---
 
-## Files
+## Files (single source of truth)
 
 | File | Description |
 |------|-------------|
-| `index.html` | Full toolkit — 18 tools, dark mode, all features (Vercel entry point) |
-| `Tool Kit 1/Procure_Sherpa_ToolKit.HTML` | Full toolkit — 18 tools, dark mode, all features |
-| `Tool Kit 1/Procure_Sherpa_Basic Toolkit.html` | RFQ workflow manager — RFQ creation, supplier evaluation, savings tracker, contracts, negotiation & dashboard |
-| `ProcureSherpaBasictoolkiit.html` | Legacy basic toolkit file (mirrors RFQ workflow version) |
+| `index.html` | The toolkit — calculators, dashboard, dark mode, all features (Vercel entry point). **Edit only this file.** |
+| `Tool Kit 1/Procure_Sherpa_Basic Toolkit.html` | Separate legacy app: RFQ workflow manager (creation, evaluation, savings tracker, contracts). Not a copy of `index.html`. |
+| `manifest.json` / `sw.js` | PWA shell — installable, offline-first caching for `index.html`. |
+| `tests/run.mjs` | Regression suite — `node tests/run.mjs` (no dependencies). |
 
 ---
 
 ## Getting Started
 
-1. Open `Procure_Sherpa_ToolKit.HTML` in any modern browser
+1. Open `index.html` in any modern browser
 2. Click any tool from the sidebar or homepage
 3. Click **Load Example** to see it in action
 4. Replace with your actual data
@@ -127,7 +131,8 @@ Works on all modern browsers:
 - All calculations run locally in your browser
 - No data is sent to any server
 - Saved comparisons stored in browser localStorage
-- Clear browser data = all saved work is deleted
+- **Backup** any time from Saved Work — restores with validation (bad files rejected, evil input sanitized)
+- Clear browser data = local copy deleted (keep a backup)
 
 ---
 
