@@ -185,6 +185,24 @@ Works on all modern browsers:
 
 ---
 
+## Appendix: Key formulas & benchmarks
+
+The formulas behind the tools — handy when you need to defend a number in a negotiation or review meeting:
+
+| Formula / benchmark | Where it applies | How to read it |
+|---------------------|------------------|----------------|
+| **EOQ = √(2DS ÷ H)** | MOQ / Order Qty | D = annual demand, S = order/setup cost, H = holding cost per unit/year. Order quantity above EOQ only makes sense with a price break — check the discount vs added carrying cost |
+| **HHI = Σ(market share %)²** | Supplier Concentration | HHI < 1,500 = unconcentrated; 1,500–2,500 = moderate; > 2,500 = highly concentrated. A single supplier above ~40% share is a dual-sourcing trigger regardless of HHI |
+| **Landed cost = FOB + freight + duty + insurance + clearance + inland** | Landed Cost | Always compare quotes on landed, not FOB — a 3% cheaper FOB quote loses to a 1% cheaper all-in quote |
+| **Should-cost = material + labour + overhead + margin** | Should Cost | Build it bottom-up from BOM weight × commodity rates. If the quote exceeds should-cost by > 15%, demand a cost breakdown |
+| **TCO = acquisition + operations (energy, spares, maintenance) + downtime + disposal − residual** | TCO | For equipment, operations typically dominate — a machine 20% cheaper to buy is often 40% costlier to own over 5 years |
+| **Savings % = (baseline − actual) ÷ baseline × 100** | Savings Analysis | Fix the baseline definition *before* the quarter starts — hard savings hit the P&L, soft savings (avoided cost, cost avoidance) don't. Report them separately |
+| **Price-variance = (new price − old price) × actual volume; volume-variance = (actual volume − budgeted volume) × old price** | Budget vs Actual | Separates "we paid more" from "we bought more" — the first is a negotiation issue, the second is a planning issue |
+| **2/10 net 45 → annualized ≈ 37%** | Payment Terms | Discount % ÷ (100 − discount %) × 365 ÷ (net days − discount days). Early-payment discounts beat almost any credit line — take them if cash allows |
+| **TDS under IT Act: 194C (works) 1%/2%, 194J (professional) 10%, 194I (rent) 10%** | GST / Tax | Verify TDS section and rate on every vendor invoice before payment release — wrong section = notice later |
+
+---
+
 ## FAQ
 
 **Do I need an account or login?**
