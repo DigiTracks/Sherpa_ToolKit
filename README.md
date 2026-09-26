@@ -58,6 +58,37 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 
 ---
 
+## Which tool when? (Quick Selector)
+
+The most common buyer question: *18 tools — which one do I open right now?* Start from your situation:
+
+| Your situation | Open this tool | Then this |
+|----------------|----------------|-----------|
+| 3 quotes on the table, all look similar | **Compare Quotes** | **Supplier Scorecard** — cheapest isn't always best |
+| "Final price ₹1,240/unit, delivered" — verify it | **Landed Cost** | Compare freight/duty lines against the quote |
+| Supplier asks for a 6% increase on raw material basis | **Price Increase** | **Should Cost** — check if the material claim holds up |
+| Contract has an escalation clause tied to WPI/CPI | **Price Escalation** | **Multi-Year Contract Cost** — see 3-year impact |
+| Supplier offers 2/10 net 45 — take the discount? | **Payment Terms** | Weigh discount value vs your working capital |
+| Build the fixture in-house, or give it to the supplier? | **Make vs Buy** | Run **TCO** on the winner for the full life cycle |
+| One supplier is ~70% of category spend | **Supplier Concentration** | Start dual-sourcing qualification |
+| Quarterly review: spend is 8% over budget | **Budget vs Actual** | **Savings Analysis** — split price vs volume effect |
+| PO value doesn't match the approved quote | **PO Value Check** | Flag before release, not after invoice |
+| Need 500 units, discount starts at 1,000 | **MOQ / Order Qty** | Check if carrying cost justifies the bigger order |
+| EUR-denominated contract, INR books | **Currency / FX** | Decide on hedging vs pass-through clause |
+| GST/TDS/TCS lines on the supplier invoice | **GST / Tax** | Verify before payment release |
+
+### Common procurement chains
+
+Real buying work is never one calculation — chain the tools the way the year actually flows:
+
+- **Annual negotiation prep:** Should Cost → Negotiation Savings → Payment Terms → walk into the meeting with numbers, not opinions
+- **New supplier award:** Compare Quotes → Supplier Scorecard → Supplier Concentration → award with risk visibility
+- **Contract renewal:** Multi-Year Contract Cost → Price Escalation → renegotiate the escalation clause with data
+- **Quarterly business review:** Budget vs Actual → Savings Analysis → report hard vs soft savings separately
+- **Capex decision:** Make vs Buy → TCO → present full-life cost, not purchase price
+
+---
+
 ## Features
 
 - **18 tools** covering the full procurement decision lifecycle
@@ -98,6 +129,24 @@ Every tool follows the same pattern: **Input → Calculation → Result → Inte
 
 ---
 
+## Install as an app (PWA)
+
+Procure Sherpa is installable — it gets its own window and icon, and keeps working without internet:
+
+**Desktop (Chrome / Edge):**
+1. Open the live URL
+2. Click the **install icon** in the address bar (or menu → *Install Procure Sherpa*)
+3. Launch it from your taskbar/start menu like any desktop app
+
+**Mobile (Android / iOS):**
+1. Open the live URL in Chrome (Android) or Safari (iOS)
+2. Menu → **Add to Home Screen**
+3. Open it from the home screen — full-screen, no browser bar
+
+**Offline:** after first load, the service worker (`sw.js`) caches the app — quotes, calculators, and saved work all work on flights or at plants with poor connectivity. Your data stays on that device.
+
+---
+
 ## How to Use
 
 Click **How to Use** in the sidebar for a comprehensive guide covering:
@@ -133,6 +182,25 @@ Works on all modern browsers:
 - Saved comparisons stored in browser localStorage
 - **Backup** any time from Saved Work — restores with validation (bad files rejected, evil input sanitized)
 - Clear browser data = local copy deleted (keep a backup)
+
+---
+
+## FAQ
+
+**Do I need an account or login?**
+No. No login, no signup, no email. Open the page and start calculating.
+
+**Can I use it for company-confidential data?**
+Yes — nothing leaves your device. All calculations and storage are local (browser localStorage). For shared machines, use Backup & Restore and keep the JSON file secure.
+
+**Does it work without internet?**
+Yes, once loaded. The service worker caches the app for offline use — ideal for plant visits and travel.
+
+**Is the data really not uploaded anywhere?**
+Correct. There is no backend — no server receives anything. Share links encode the comparison in the URL itself.
+
+**Can I move my saved work to another computer?**
+Yes. Saved Work → Backup & Restore → download the JSON, restore it on the new machine.
 
 ---
 
