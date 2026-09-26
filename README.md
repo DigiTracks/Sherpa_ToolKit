@@ -200,6 +200,20 @@ The formulas behind the tools — handy when you need to defend a number in a ne
 | **Price-variance = (new price − old price) × actual volume; volume-variance = (actual volume − budgeted volume) × old price** | Budget vs Actual | Separates "we paid more" from "we bought more" — the first is a negotiation issue, the second is a planning issue |
 | **2/10 net 45 → annualized ≈ 37%** | Payment Terms | Discount % ÷ (100 − discount %) × 365 ÷ (net days − discount days). Early-payment discounts beat almost any credit line — take them if cash allows |
 | **TDS under IT Act: 194C (works) 1%/2%, 194J (professional) 10%, 194I (rent) 10%** | GST / Tax | Verify TDS section and rate on every vendor invoice before payment release — wrong section = notice later |
+| **Safety stock = Z × σd × √LT** | MOQ / Order Qty | Z = service level factor (90% → 1.28, 95% → 1.65, 99% → 2.33), σd = demand variability, LT = lead time in matching units. Higher service levels cost superlinearly — 99% is rarely worth it for C-class items |
+| **Reorder point = (avg demand × lead time) + safety stock** | MOQ / Order Qty | The trigger line for replenishment. If you reorder after stock-out instead of at ROP, you're paying for expediting twice |
+| **Capacity utilization = actual output ÷ designed capacity × 100** | Make vs Buy | Below ~70% in-house utilization usually means make-vs-buy tilts to buy — fixed overhead spreads over too few units |
+
+### Incoterms quick reference (quote comparisons depend on them)
+
+| Incoterm | Buyer pays for | Quote comparison note |
+|----------|----------------|----------------------|
+| **EXW** | Everything from supplier's dock | Lowest headline price, highest hidden cost — always convert to landed before comparing |
+| **FOB** | Ocean freight + insurance + import clearance | The standard comparison basis for imports |
+| **CIF** | Only import clearance + inland | Supplier-chosen freight can be padded — request the freight invoice copy |
+| **DDP** | Nothing until delivery | Highest headline price, lowest risk — best for comparing true total cost |
+
+**Rule of thumb:** never compare quotes across different Incoterms on price — normalize to landed cost first (use the Landed Cost tool).
 
 ---
 
